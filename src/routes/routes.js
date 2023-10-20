@@ -4,11 +4,12 @@ import CondicionAtmosferica from "../Pages/CondicionAtmosferica";
 import Login from '../components/Login'
 import Login2 from '../components/Login2'
 import CocteleRandom from '../Pages/CocteleRandom'
+import Tours from '../Pages/Tours'
 
 export const rutas = createBrowserRouter([
     {
       path: "/",
-      element: <DashBoard />,
+      element: <Tours />
     },
     {
       path: "/CondicionAtmosferica",
@@ -25,5 +26,6 @@ export const rutas = createBrowserRouter([
     {
       path: "/CocteleRandom",
       element: <CocteleRandom />
-    }
+    },
+
 ]);
