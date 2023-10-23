@@ -15,7 +15,7 @@ function CocteleRandom() {
             const resultado = await fetch("https://www.thecocktaildb.com/api/json/v1/1/random.php")
             if (!resultado.ok) {
                 console.log("no se logro cargar el contenido")
-            }
+            } //Logica para cargar la API
             const cocktail = await resultado.json()
             setDatos([...cocktail.drinks])
             console.log(cocktail.drinks)

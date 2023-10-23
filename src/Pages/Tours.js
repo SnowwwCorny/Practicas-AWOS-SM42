@@ -20,10 +20,8 @@ function Tours() {
     const tourDoc = doc(dbFirebase, 'tours', elID);
     await updateDoc(tourDoc, { Nombre: nombre, Descripcion: descripcion, Precio: Number(precio) });
 
-    // Limpia el formulario después de la edición
     limpiarFormulario();
 
-    // Actualiza la lista de tours después de editar
     mostrarTours();
   };
 
@@ -38,10 +36,8 @@ function Tours() {
     await addDoc(ToursCollection, { Nombre: nombre, Descripcion: descripcion, Precio: precio });
     console.log("Tour agregado");
 
-    // Limpia el formulario después de agregar un tour
     limpiarFormulario();
 
-    // Actualiza la lista de tours después de agregar
     mostrarTours();
   };
 
@@ -60,7 +56,6 @@ function Tours() {
     const tourDocument = doc(dbFirebase, "tours", id);
     await deleteDoc(tourDocument);
 
-    // Actualiza la lista de tours después de eliminar
     mostrarTours();
   };
 
@@ -72,7 +67,7 @@ function Tours() {
     setDescripcion(elTour.Descripcion);
     setPrecio(elTour.Precio);
     setID(id);
-    setModalVisible(true); 
+    setModalVisible(true);
   };
 
   return (
@@ -96,7 +91,7 @@ function Tours() {
         )
       })}
 
-      {/* Modal */}
+
       <div className={`modal fade ${modalVisible ? 'show' : ''}`} id="exampleModal" tabIndex="-1" aria-labelledby="exampleModalLabel" aria-hidden={!modalVisible}>
         <div className="modal-dialog">
           <div className="modal-content">
@@ -108,7 +103,7 @@ function Tours() {
               <form onSubmit={editarTour}>
                 <input className="bg-slate-100 rounded-lg p-2 mb-2" type="text" placeholder="Nombre" value={nombre} onChange={(e) => setNombre(e.target.value)} />
                 <input className="bg-slate-100 rounded-lg p-2 mb-2" type="text" placeholder="Descripcion" value={descripcion} onChange={(e) => setDescripcion(e.target.value)} />
-                <input  className="bg-slate-100 rounded-lg p-2 mb-2" type="number" placeholder="Precio" value={precio} onChange={(e) => setPrecio(e.target.value)} />
+                <input className="bg-slate-100 rounded-lg p-2 mb-2" type="number" placeholder="Precio" value={precio} onChange={(e) => setPrecio(e.target.value)} />
               </form>
             </div>
             <div className="modal-footer">

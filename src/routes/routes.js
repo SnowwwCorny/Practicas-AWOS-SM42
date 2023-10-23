@@ -5,6 +5,8 @@ import Login from '../components/Login'
 import Login2 from '../components/Login2'
 import CocteleRandom from '../Pages/CocteleRandom'
 import Tours from '../Pages/Tours'
+import Examen from "../Pages/Examen";
+import Api from "../Pages/Api"
 
 export const rutas = createBrowserRouter([
     {
@@ -27,5 +29,13 @@ export const rutas = createBrowserRouter([
       path: "/CocteleRandom",
       element: <CocteleRandom />
     },
+    {
+      path: "/Examen",
+      element: <Examen />
+    },
+    {
+      path: "/Api",
+      element: <Api />  
+    }
 
 ]);
