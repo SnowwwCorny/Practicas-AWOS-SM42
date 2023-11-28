@@ -1,4 +1,4 @@
-import React from 'react'
+/*import React from 'react'
 import { dbFirebase } from '../db/firebaseConfig'
 import { useState } from 'react'
 import { collection, addDoc, getDocs, deleteDoc, doc, getDoc, updateDoc } from "@firebase/firestore"
@@ -117,4 +117,4 @@ function Tours() {
   );
 }
 
-export default Tours;
+export default Tours; */
