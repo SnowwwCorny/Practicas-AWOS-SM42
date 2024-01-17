@@ -8,6 +8,7 @@ import Examen from "../Pages/Examen";
 import Api from "../Pages/Api"
 import Tours from "../components/Tours";
 import Nasa from '../Pages/Nasa'
+import Componente from "../components/Componente";
 
 export const rutas = createBrowserRouter([
     {
@@ -41,6 +42,10 @@ export const rutas = createBrowserRouter([
     {
       path: "/Nasa",
       element: <Nasa />
+    },
+    {
+      path: "/Componente",
+      element: <Componente/>
     }
 
 ]);
